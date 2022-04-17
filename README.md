@@ -80,11 +80,11 @@ APP_ENV="production" COUNTRY_CODE="US" ZIP_CODE="20057" python -m app.daily_brie
 Running the web app (then view localhost:5000 in the browser):
 
 ```sh
-Mac OS: 
+# Mac OS: 
 FLASK_APP=web_app flask run
 
-Windows OS:
-... if `export` does not worth for you, try `set` instead
+# Windows OS:
+# ... if `export` does not worth for you, try `set` instead
 export FLASK_APP=web_app
 flask run
 ```
