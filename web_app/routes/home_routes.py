@@ -16,3 +16,22 @@ def about():
     print("ABOUT...")
     return "About Me"
     #return render_template("about.html")
+
+@home_routes.route("/another")
+def another():
+    print("ANOTHER PAGE...")
+    return "Here is another page"
+
+
+@home_routes.route("/hello")
+def hello_world():
+    print("HELLO...")
+    
+    url_params = dict(request.args)
+    print("URL PARAMS:", url_params) #> can be empty like {} or full of params like {"name":"Harper"}
+    
+    name = url_params.get("name") or "World"
+    
+    message = f"Hello, {name}!"
+    return message
+    #return render_template("hello.html", message=message)
